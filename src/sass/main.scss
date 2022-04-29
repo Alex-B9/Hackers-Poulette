@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'bellota';
+  src: url("src/assets/fonts/Bellota-Bold.otf"),
+  url("src/assets/fonts/Bellota-BoldItalic.otf"),
+  url("src/assets/fonts/Bellota-Italic.otf"),
+  url("src/assets/fonts/Bellota-Light.otf"),
+  url("src/assets/fonts/Bellota-LightItalic.otf"),
+  url("src/assets/fonts/Bellota-Regular.otf");
+}
+body{
+  height: 100vh;
+  width: 100vw;
+
+
+
+  background-color: #0D8187;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%230D8187' cx='50' cy='0' r='50'/%3E%3Cg fill='%23107c82' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%2312777c' cx='50' cy='100' r='50'/%3E%3Cg fill='%23157277' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23176e72' cx='50' cy='200' r='50'/%3E%3Cg fill='%231a696d' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%231c6568' cx='50' cy='300' r='50'/%3E%3Cg fill='%231e6064' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23205c5f' cx='50' cy='400' r='50'/%3E%3Cg fill='%2322585b' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23245456' cx='50' cy='500' r='50'/%3E%3Cg fill='%23265052' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23274c4e' cx='50' cy='600' r='50'/%3E%3Cg fill='%2329484a' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%232a4446' cx='50' cy='700' r='50'/%3E%3Cg fill='%232b4142' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%232c3d3e' cx='50' cy='800' r='50'/%3E%3Cg fill='%232d3a3a' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%232e3637' cx='50' cy='900' r='50'/%3E%3Cg fill='%232f3333' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23303030' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
+
+
+  font-family: 'Bellota Text', cursive;
+}
+.container{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 2.2rem;
+}
+.logo{
+  background-color: #fbfbfb;
+  border-radius: 50%;
+  box-shadow: 0 0 14px 5px #303030;
+  width: 150px;
+  z-index: 1;
+  transform: translateY(-15%);
+  img{
+    width: 100%;
+    padding-top: 0;
+    transform: translateY(-15%);
+    z-index: 99;
+  }
+}
+.box_container{
+  width: 55%;
+  //height: 90%;
+  z-index: 2;
+
+  //box-shadow: #303030;
+  border: 5px solid #ffffff;
+  border-radius: 20px;
+  box-shadow:  0 0 14px 10px #303030;
+
+
+  background-color: #fbfbfb;
+  color: #303030;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -70px;
+
+
+
+  form{
+    width: 100%;
+    height: 100%;
+    line-height: 3rem;
+    .name {
+      input {
+        width: 40%;
+      }
+    }
+      input{
+        padding: 10px 10px;
+        max-width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        //border: 0.001em solid #fbfbfb;
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: #0D8187;
+        border-radius: 5px;
+        width: 80%;
+        color: #303030;
+        &:focus {
+          outline: 0.08rem ridge #0D8187;
+        }
+      }
+    select {
+      outline:0.05rem ridge #0D8187;
+      text-align: center;
+      border-radius: 10px;
+    }
+    input[type=submit]{
+      height: 2.5rem;
+      width: 20%;
+      background-color: #0D8187;
+      color: #ffffff;
+      border:1px solid #303030 ;
+      border-radius: 10px;
+      box-shadow: 0 0 0 0.01em #303030;
+
+      padding-top: 10px;
+
+      font-weight: 550;
+      font-size: 15px;
+    }
+    textarea {
+      margin-top: 0.8rem;
+      padding: 10px;
+      width: 80%;
+      max-height: 100px;
+      line-height: 1.5;
+      border-radius: 10px;
+      //border: 0 solid #303030;
+      box-shadow: 0 0 0 0.01em #303030;
+      outline: 0;
+      border-width: 0 0 1px ;
+      border-color: #0D8187;
+      text-align: center;
+      overflow: scroll;
+      resize: none;
+    }
+
+  }
+}
+.text_content{
+  padding-top: 0;
+  line-height: normal;
+  width: 80%;
+
+  h1 {
+    size: 50px;
+    color: #0D8187;
+  }
+
+  p{
+    font-weight: 550;
+    color: #303030;
+  }
+}
+  .gender {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    div {
+      padding: 0;
+      line-height: 1em;
+    }
+  }

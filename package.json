@@ -1,0 +1,20 @@
+{
+  "name": "hackers-poulette",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./src/sass/main.scss:./style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-B9/Hackers-Poulette.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex-B9/Hackers-Poulette/issues"
+  },
+  "homepage": "https://github.com/Alex-B9/Hackers-Poulette#readme",
+  "description": ""
+}
