@@ -29,11 +29,14 @@ session_start();
 //$_SESSION['ErrMessage'];
 if (!empty($_SESSION['ErrLastName'])){
     echo $_SESSION['ErrLastName'];
-}else if (!empty($_SESSION['ErrFirstName'])){
+}
+if (!empty($_SESSION['ErrFirstName'])){
     echo $_SESSION['ErrFirstName'];
-}else if (!empty($_SESSION['ErrCountry'])){
+}
+if (!empty($_SESSION['ErrCountry'])){
     echo $_SESSION['ErrCountry'];
-}else if (!empty($_SESSION['ErrMessage'])){
+}
+if (!empty($_SESSION['ErrMessage'])){
     echo $_SESSION['ErrMessage'];
 }
 ?>

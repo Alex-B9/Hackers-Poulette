@@ -17,13 +17,6 @@ $gender = $_POST['gender'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-// Sessions error
-$_SESSION['ErrFirstName'] = "<script>alert('Please complete firstname')</script>";
-$_SESSION['ErrLastName'] = "<script>alert('Please complete lastname')</script>";
-$_SESSION['ErrCountry'] = "<script>alert('Please complete country')</script>";
-$_SESSION['ErrEmail'] = "<script>alert('Please complete email')</script>";
-$_SESSION['ErrMessage'] = "<script>alert('Please complete message')</script>";
-
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer();
     try {
@@ -66,21 +59,26 @@ $mail = new PHPMailer();
 
         if (empty($lastname)){
 //            echo $_SESSION['ErrLastName'];
+            $_SESSION['ErrLastName'] = "<script>alert('Please complete lastname')</script>";
             echo "<script> window.location.href='index.php';</script>";
 //            header('location:index.php');
         } else if (empty($firstName)){
 //            echo $_SESSION['ErrFirstName'];
+            $_SESSION['ErrFirstName'] = "<script>alert('Please complete firstname')</script>";
             echo "<script> window.location.href='index.php';</script>";
 //            header('location:index.php');
         } else if (empty($country)){
 //            echo $_SESSION['ErrCountry'];
+            $_SESSION['ErrCountry'] = "<script>alert('Please complete country')</script>";
             echo "<script> window.location.href='index.php';</script>";
         }else if (empty($email)){
 //            echo $_SESSION['ErrEmail'];
+            $_SESSION['ErrEmail'] = "<script>alert('Please complete email')</script>";
             echo "<script> window.location.href='index.php';</script>";
 //            header('location:index.php');
         }else if (empty($message)){
 //            echo $_SESSION['ErrMessage'];
+            $_SESSION['ErrMessage'] = "<script>alert('Please complete message')</script>";
             echo "<script> window.location.href='index.php';</script>";
 //            header('location:index.php');
         }else {
