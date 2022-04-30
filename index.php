@@ -1,3 +1,11 @@
+<?php
+session_start();
+//$_SESSION['ErrFirstName'];
+//$_SESSION['ErrLastName'];
+//$_SESSION['ErrCountry'];
+//$_SESSION['ErrEmail'];
+//$_SESSION['ErrMessage'];
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,6 +21,22 @@
     <title>Hackers Poulettes</title>
 </head>
 <body>
+<?php
+//$_SESSION['ErrFirstName'];
+//$_SESSION['ErrLastName'];
+//$_SESSION['ErrCountry'];
+//$_SESSION['ErrEmail'];
+//$_SESSION['ErrMessage'];
+if (!empty($_SESSION['ErrLastName'])){
+    echo $_SESSION['ErrLastName'];
+}else if (!empty($_SESSION['ErrFirstName'])){
+    echo $_SESSION['ErrFirstName'];
+}else if (!empty($_SESSION['ErrCountry'])){
+    echo $_SESSION['ErrCountry'];
+}else if (!empty($_SESSION['ErrMessage'])){
+    echo $_SESSION['ErrMessage'];
+}
+?>
     <div class="container">
         <div class="logo">
             <a href="#Home">
@@ -29,9 +53,9 @@
             <form method="POST" action="mail.php">
                 <div class="name">
                     <input type="text" name="lastname" placeholder="Lastname"
-                           REQUIRED>
+                           >
                     <input type="text" name="firstname" placeholder="Firstname"
-                           REQUIRED>
+                           >
                 </div>
                 <div>
 
@@ -43,7 +67,7 @@
                     <input type="text" placeholder="Country" name="country">
                 </div>
                 <div>
-                    <input type="text" name="email" placeholder="Email" REQUIRED>
+                    <input type="text" name="email" placeholder="Email" >
                 </div>
                 <div class="gender">
                     <div>
@@ -57,23 +81,26 @@
                     </div>
                 </div>
                 <div>
-                    <select name="subject" REQUIRED>
+                    <select name="subject">
                         <option value="choose"> Select subject </option>
                         <option value="subject1">subject1</option>
                         <option value="subject2">subject2</option>
-                        <option value=subject3">subject3</option>
+                        <option value="subject3">subject3</option>
                     </select>
                 </div>
                 <div>
                     <textarea name="message" id="message"
                               placeholder="Your message here" cols="50"
-                              rows="7" REQUIRED></textarea>
+                              rows="7" ></textarea>
                 </div>
                 <div>
-                    <input type="submit" value="Send">
+                    <input name="submit" type="submit" value="Send">
                 </div>
             </form>
         </div>
     </div>
 </body>
 </html>
+
+<?php
+session_destroy();
